@@ -1,0 +1,19 @@
+.border{
+    border: 1px solid black;
+}
+#logIn{
+    border: 1px solid black;
+}
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: gainsboro;
+  margin-top: 25px;
+}
+.border-green{
+  border-top:4px solid #16a34a;
+}
+
+.border-red{
+  border-top:4px solid #A855F7;
+}

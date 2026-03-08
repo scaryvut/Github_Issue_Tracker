@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="./assets/github-logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-200">
+
+    <section id="issuePage" class="hidden">
+            <section class="bg-white flex justify-between pt-[16px] px-[80px] pb-[10px]">
+        <div class="flex justify-between bg-center gap-1">
+             <img class="w-[36px] h-[37px]" src="./assets/github-logo.png" alt="">
+             <h2 class="text-2xl font-bold">GitHub Issues Tracker</h2>
+        </div>
+        <div>
+            <div class="join">
+                <div>
+                    <label class="input validator join-item">
+                    <input id="input-search" type="text"  placeholder="Search Issues..." required />
+                    </label>
+                    <div class="validator-hint hidden">Write Your Facing Issues</div>
+                </div>
+                <button id="btn-search" class="btn btn-primary join-item">+ New Issue</button>
+                </div>
+        </div>
+
+    </section>
+
+    <main class="mx-[245px]">
+        <section class="">
+            <div class="btn-p flex gap-x-8 w-[1110px] h-[88px] bg-white mt-[60px] rounded-[5px] items-center px-[24px]">
+                <div><button onclick="toggleStyle('all')" id="all" class="btn w-[80px] h-[32px] bg-blue-500 rounded-[5px] ">All</button></div>
+                <div><button onclick="toggleStyle('open')" id="open" class="btn w-[80px] h-[32px] bg-white rounded-[5px]">Open</button></div>
+                <div><button onclick="toggleStyle('close')" id="close" class="btn w-[80px] h-[32px] bg-white rounded-[5px]">Close</button></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="btn-p flex gap-x-2 w-[1110px] h-[98px] bg-white mt-[16px] rounded-[5px] items-center shadow px-[24px]">
+                <div>
+                <img src="./assets/Aperture.png" alt="">
+                </div>
+                <div>
+                <h3 id="sum" class="font-bold">0 Issues</h3>
+                <p class="text-gray-400">Track and manage your project issues</p>
+                </div>
+    <div class="flex items-center space-x-6 ml-auto">
+    <div class="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity">
+      <span class="w-3 h-3 bg-emerald-500 rounded-full"></span>
+      <span class="text-sm font-medium text-gray-700">Open</span>
+    </div>
+    
+    <div class="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity">
+      <span class="w-3 h-3 bg-violet-500 rounded-full"></span>
+      <span class="text-sm font-medium text-gray-700">Closed</span>
+    </div>
+  </div>
+
+            </div>
+
+        </section>
+
+        <section id="cardSection" class="grid grid-cols-4 gap-x-25 pl-4 pr-4">
+
+        </section>
+
+    </main>
+    </section>
+
+    <section id="logPage" class="w-[520px] mx-auto h-[743px] bg-white flex p-5">
+        <div>
+            <div class=" flex flex-col items-center mb-8">
+            <img src="./assets/github-logo.png" alt=""><br>
+            <h2 class="text-xl font-bold">GitHub Issues Tracker</h2>
+            <p class="text-gray-400">Sign in to manage your issues</p>
+
+            </div>
+
+       
+            <fieldset class="fieldset bg-white rounded-box w-xs p-4 w-[456px] h-[218px]">
+            <label class="text">Username</label>
+            <input id="username" type="text" class="input w-[456px] h-[48px]" placeholder="Enter Username" />
+
+            <label class="text">Password</label>
+            <input id="password" type="password" class="input w-[456px] h-[48px]" placeholder="Enter Password" />
+
+            <button onclick="login()" id="logLoad" class="btn btn-primary mt-4 w-[456px] h-[48px]">Login</button>
+        </fieldset>
+
+        <div class="relative my-8">
+      
+      <div class="relative flex justify-center text-xs uppercase"><span class="bg-white px-2 text-gray-400">OR</span></div>
+    </div>
+
+    <div class="bg-gray-50 rounded-lg p-4 text-center">
+      <p class="text-xs text-gray-400 mb-2">Demo Credentials:</p>
+      <p class="text-sm font-semibold text-gray-700">Username: <span class="font-normal">admin</span></p>
+      <p class="text-sm font-semibold text-gray-700">Password: <span class="font-normal">admin123</span></p>
+    </div>
+
+        </div>
+
+    </section>
+    <!-- Open the modal using ID.showModal() method -->
+<button class="btn hidden" onclick="my_modal_5.showModal()">open modal</button>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="detailsContainer">
+
+    </div>
+
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-primary">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+    
+
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
