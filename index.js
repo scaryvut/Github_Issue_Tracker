@@ -42,14 +42,14 @@ function toggleStyle(id) {
     open.classList.add('bg-white', 'text-black')
     close.classList.add('bg-white', 'text-black')
 
-    all.classList.remove('bg-blue-500', 'text-white')
-    open.classList.remove('bg-blue-500', 'text-white')
-    close.classList.remove('bg-blue-500', 'text-white')
+    all.classList.remove('bg-primary', 'text-white')
+    open.classList.remove('bg-primary', 'text-white')
+    close.classList.remove('bg-primary', 'text-white')
     const selected = document.getElementById(id);
     currentStatus=id;
     console.log(currentStatus)
     selected.classList.remove('bg-white', 'text-black')
-    selected.classList.add('bg-blue-500', 'text-white')
+    selected.classList.add('bg-primary', 'text-white')
        
 const cards = document.querySelectorAll(".issue-card");
 
