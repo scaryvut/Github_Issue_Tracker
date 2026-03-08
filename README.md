@@ -6,3 +6,6 @@ Q02: What is the spread operator (...)?
 
 Q03: What is the difference between map(), filter(), and forEach()?
 =>Answer: Difference between map(), filter(), and forEach() is map() mainly transforms each element and returns a new array of the same length. filter() mainly selects elements meeting a condition and returns a new array and forEach() mainly runs a function on each element for side effects only, returns undefined.
+
+Q04: What is an arrow function?
+=>Answer: An arrow function is a concise syntax for writing functions using =>, which also lexically binds this from its surrounding scope.
