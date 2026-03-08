@@ -4,6 +4,16 @@ const close = document.getElementById('close');
 const cardSection=document.getElementById("cardSection")
 const status=document.getElementById("status")
 
+const manageSpinner = (status) => {
+  if (status == true) {
+    document.getElementById("spinner").classList.remove("hidden");
+    document.getElementById("cardSection").classList.add("hidden");
+  } else {
+    document.getElementById("cardSection").classList.remove("hidden");
+    document.getElementById("spinner").classList.add("hidden");
+  }
+};
+
 function login() {
   const userName = document.getElementById("username").value;
   const password = document.getElementById("password").value;
