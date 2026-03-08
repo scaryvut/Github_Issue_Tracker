@@ -9,3 +9,6 @@ Q03: What is the difference between map(), filter(), and forEach()?
 
 Q04: What is an arrow function?
 =>Answer: An arrow function is a concise syntax for writing functions using =>, which also lexically binds this from its surrounding scope.
+
+Q05: What are template literals?
+=>Answer: Template literals are strings in backticks () that support variable interpolation (${…}`) and multi-line text.
