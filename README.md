@@ -3,3 +3,6 @@ Q01: What is the difference between var, let, and const?
 
 Q02: What is the spread operator (...)?
 =>Answer: spread operator can copy a array, manage multiple array and easy to pass a function value.
+
+Q03: What is the difference between map(), filter(), and forEach()?
+=>Answer: Difference between map(), filter(), and forEach() is map() mainly transforms each element and returns a new array of the same length. filter() mainly selects elements meeting a condition and returns a new array and forEach() mainly runs a function on each element for side effects only, returns undefined.
